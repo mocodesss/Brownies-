@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brownies?</title>
+    <style>
+      body {
+        background-image: linear-gradient(to top,#683531 0%, #95362E 60%);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      h1 {
+        text-align: center;
+        color: #f7e8c3;
+        font-size: 32px;
+        font-variant: normal;
+        max-width: 500px;
+        display: block;
+        margin: auto;
+      }
+      h2 {
+        text-align: center;
+        color: #f7e8c3;
+        border: 4px dashed #ef7079;
+        padding: 12px;
+        font-size: 19px;
+        border-radius: 20px;
+        font-weight: lighter;
+      }
+
+      p {
+        text-align:left;
+        color: #f7e8c3;
+        line-height: 1.4;
+        font-weight: normal;
+        padding: 10px 20px 5px 20px;
+        margin: 15px 0px 5px 0px;
+        font-size: 20px;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        background-color: #ef7079;
+        color: #f7e8c3;
+        padding: 16px 30px;
+        font-size: 26px;
+        border: 4px dashed #f7e8c3;
+        box-shadow: 2px 2px 2px rgba(83, 83, 83, 0.15);
+        transition: all 200ms ease-in-out;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      button:hover {
+        transform: translateY(-5px);
+        cursor: pointer;
+        background-color: #f7e8c3;
+        color: #ef7079;
+        border: 4px dashed #ef7079;
+        
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 80%;
+        max-height: 450px;
+        border-radius: 30px;
+        border: 6px dashed #ef7079;
+        transition: all 35ms ease-in-out;
+      }
+
+      img:hover {
+        max-width: 82%;
+        max-height: 475px;
+      }
+
+      hr{
+        border: 3px dashed #ef7079;
+      
+      }
+
+      .history-of-brownies {
+        display: block;
+        margin: 0 0 70px 0;
+        text-decoration: none;
+        color: #ef7079;
+      }
+      .history-of-brownies:hover {
+        text-decoration: underline;
+      }
+
+      .footer {
+        text-align: center;
+        padding-top: 30px;
+      }
+      .container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 15px 45px;
+      }
+      .link {
+        color: #ef7079;
+        text-decoration: none;
+      }
+      .link:hover {
+        text-decoration: underline;
+      }
+      .icecream {
+        text-align: center;
+        padding-top: 50px;
+        color: #f7e8c3;
+        font-size: 13px;
+        line-height: 4px;
+        padding-top: 15px;
+      }
+     
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Even Imaginary Brownies<br/> Love You Back</h1>
+      <h2>
+        You're craving something sweet, gooey, and all around delightful.
+        Brownies are great alone or with your favorite icecream. Actually the
+        icecream is a must! Well have way less fun with some imaginary brownies!
+      </h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/014/978/original/brownies.jpeg?1628555528"
+        alt="stack of delicious, chocolatey brownies"
+      />
+      <p>
+        You've been fighting the urge for centuries, decades, years, weeks, days, hours, minutes, <em>seconds</em>. Is it time? It's
+        time, it's always time. No reason needed. Do they melt in your mouth? Even better they'll melt in thin air! 
+      <br>
+      <br>
+        <span>
+      <a
+        href="https://www.thenibble.com/reviews/main/cookies/cookies2/history-of-the-brownie.asp"
+        target="_blank"
+        class="history-of-brownies"
+      >
+        Learn about the history of brownies.👀
+      </a>
+      </span>
+      </p>
+      
+      <button class="buy-button">Buy an imaginary box of Brownie Mix</button>
+
+      <p class="footer">
+        Coded by
+        <a
+          href="https://www.linkedin.com/in/meghan-oconnell/"
+          target="_blank"
+          class="link"
+        >
+          Meghan OConnell</a
+        >.
+        <hr>
+        <div class="icecream">Imaginary <strong>icecream</strong> page is on its way🍦</div>
+      </p>
+    </div>
+    <script>
+      function buyMix() {
+        let name = prompt("What's your name?");
+        let flavor = prompt("What flavor brownies do you want?");
+
+if (name.length === 0 || flavor.length === 0) {
+  alert("You forgot a question or two.");
+  
+} else {
+  alert(
+          "Congratulations " +
+            name +
+            "! With your \"purchase\" you're no closer to your " +
+            flavor.toLowerCase() +
+            " brownies!"
+        );
+}
+
+        
+      }
+      let buybutton = document.querySelector(".buy-button");
+      buybutton.addEventListener("click", buyMix);
+    </script>
+  </body>
+</html>
